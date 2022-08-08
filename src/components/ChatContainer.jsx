@@ -20,9 +20,10 @@ export default function ChatContainer({ currentChat, socket }) {
         from: data._id,
         to: currentChat._id,
       });
+      setMessages(response.data);
     }
     func();
-    setMessages(response.data);
+    
   }, [currentChat]);
 
   useEffect(() => {
